@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <title>Главная страница</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <header class="header" style="background-color: gray;">
+      <div class="container">
+        <div class="header__inner">
+            <a href="/" class="logo">
+              <div class="logo-img">
+                <img src="images/icons/logo.svg" alt="" class="logo-img__image">
+              </div>
+              <span class="logo-text">Детейлинг студия</span>
+            </a>
+          <ul class="menu-list">
+            <li class="menu-list__item">
+                <a class="map-icon" href="#yandex-map">
+                  <img src="images/icons/map-icon.svg" alt="" class="map-icons__image">
+                </a>
+              <a href="#yandex-map" class="map-text">Выборгское ш., 212,<br>корп. 12А</a>
+            </li>
+            <li class="menu-list__item">
+              <span class="company-icon">
+                <img src="images/icons/parnas.svg" alt="" class="company-icon__image">
+              </span>
+              <p class="company-text">Парнас</p>
+            </li>
+            <li class="menu-list__item">
+              <a href="#reviews" class="map-logo">
+                <img class="map-logo__image" src="images/icons/yandexMaps.svg" alt="">
+              </a>
+              <a href="#reviews" class="map-star">
+                <img src="images/icons/map-star.svg" alt="" class="map-star__image">
+              </a>
+            </li>
+            <li class="menu-list__item">
+              <a href="#" class="whatsapp">
+                <img src="images/icons/whatsapp.svg" alt="" class="whatsapp-icon">
+              </a>
+              <div class="contacts">
+                <a href="tel:+79009996863" class="contacts-number">+7 900 999 68 63</a>
+                <a href="#" class="contacts-callback callback">Перезвоним за 1 минуту</a>
+              </div>
+            </li>
+          </ul>
+          <button class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="mobile-menu">
+    <button class="mobile-menu__close">✕</button>
+    <div class="mobile-menu__inner">
+        <div class="mobile-menu__item">
+            <a class="map-icon" href="#">
+                <img src="images/icons/map-icon.svg" alt="">
+            </a>
+            <a href="#" class="map-text">Выборгское ш., 212,<br>корп. 12А</a>
+        </div>
+        
+        <div class="mobile-menu__item">
+            <span class="company-icon">
+                <img src="images/icons/parnas.svg" alt="">
+            </span>
+            <p class="company-text">Парнас</p>
+        </div>
+        
+        <div class="mobile-menu__item">
+            <div class="map-logo">
+                <img src="images/icons/yandexMaps.svg" alt="">
+            </div>
+            <div class="map-star">
+                <img src="images/icons/map-star.svg" alt="">
+            </div>
+        </div>
+        
+        <div class="mobile-menu__item">
+            <div class="whatsapp">
+                <img src="images/icons/whatsapp.svg" alt="">
+            </div>
+            <div class="contacts">
+                <a href="tel:+79009996863" class="contacts-number">+7 900 999 68 63</a>
+                <a href="#" class="contacts-callback callback">Перезвоним за 1 минуту</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="menu-overlay"></div>
+        </div>
+      </div>
+    </header>
+
+<div class="callback-popup" id="callback-popup">
+    <div class="callback-popup__content">
+        <button class="callback-popup__close" aria-label="Закрыть"></button>
+        <div class="callback-popup__left">
+            <div class="callback-popup__left-inner">
+                <div class="callback-popup__top">
+                    <div class="callback-popup__top-icon">
+                        <img src="images/icons/avatar.svg" alt="" class="callback-popup__top-image">
+                    </div>
+                    <ul class="callback-popup__top-list">
+                        <li class="callback-popup__top-item">Имя Фамилия</li>
+                        <li class="callback-popup__top-item">служба заботы о клиентах</li>
+                    </ul>
+                </div>
+                <h3 class="callback-popup__left-title">Заполните форму ниже,</h3>
+                <p class="callback-popup__left-description">Наш специалист свяжется с вами в течение 5 минут или в удобное для вас время</p>
+                <div class="callback-popup__left-img">
+                    <img src="images/callback/tel.avif" alt="" class="callback-popup__left-image">
+                </div>
+            </div>
+        </div>
+        <div class="callback-popup__right">
+            <div class="callback-popup__right-inner">
+                <form class="callback-popup__form" id="finalForm">
+                    <input type="tel" class="callback-popup__form-number quiz-finish__text-number" placeholder="Введите номер телефона" required>
+                    <p class="callback-popup__form-text">Выберите способ связи:</p>
+                    <div class="callback-popup__form-way quiz-finish__text-way">
+                        <label class="callback-popup__form-choice quiz-finish__text-choice">
+                            <input 
+                                class="callback-popup__form-radio quiz-finish__text-radio" 
+                                type="radio" 
+                                name="connection"
+                                value="phone"
+                                aria-label="Связь по телефону"
+                            >
+                            <span class="callback-popup__form-span quiz-finish__text-span">
+                                Телефон<span class="tel" aria-hidden="true"></span>
+                            </span>
+                        </label>
+                        <label class="callback-popup__form-choice quiz-finish__text-choice">
+                            <input 
+                                class="callback-popup__form-radio quiz-finish__text-radio" 
+                                type="radio" 
+                                name="connection"
+                                value="whatsapp"
+                                aria-label="Связь через WhatsApp"
+                            >
+                            <span class="callback-popup__form-span quiz-finish__text-span">
+                                WhatsApp <span class="_whatsapp" aria-hidden="true"></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="error-message" id="connection-error">
+                        Пожалуйста, выберите способ связи
+                    </div>
+                    <p class="callback-popup__form-text">Выберите время звонка:</p>
+                    <div class="callback-popup__times">
+                        <label class="callback-popup__times-choice">
+                            <input 
+                                class="callback-popup__times-radio" 
+                                type="radio" 
+                                name="time"
+                                value="Now"
+                                aria-label="сейчас"
+                            >
+                            <span class="callback-popup__times-span">Сейчас</span>
+                        </label>
+                        <label class="callback-popup__times-choice">
+                            <input 
+                                class="callback-popup__times-radio" 
+                                type="radio" 
+                                name="time"
+                                value="InTime"
+                                aria-label="По времени"
+                            >
+                            <span class="callback-popup__times-span">По времени</span>
+                        </label>
+                    </div>
+                    <p class="callback-popup__form-text">Выберите время звонка:</p>
+                    <div class="callback-popup__form-times">
+                        <input type="text" class="callback-popup__form-time quiz-finish__text-number" placeholder="Например, завтра в 12:00">
+                        <div class="callback-popup__form-buttons quiz-finish__text-buttons">
+                            <button class="callback-popup__form-button quiz-finish__text-button" type="submit">Заказать обратный звонок</button>
+                        </div>
+                        <label class="callback-popup__form-agreements quiz-finish__text-agreements">
+                            <input type="checkbox" class="callback-popup__form-agreement quiz-finish__text-agreement" required>
+                            <span class="callback-popup__form-check quiz-finish__text-check"></span>
+                            <p class="callback-popup__form-processing quiz-finish__text-processing">Я принимаю условия <a href="#">политики конфиденциальности</a></p>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<main class="main">
+<section class="success">
+    <div class="container">
+        <div class="success-inner">
+            <h2 class="success-title">Все прошло успешно!</h2>
+            <p class="success-description">Для более полной оценки объема работ специалисту <span>необходимо задать вам несколько уточняющих вопросов</span></p>
+            <ul class="success-list">
+                <li class="success-item">Пожалуйста, проверьте корректность введенного вами номера телефона</li>
+            </ul>
+            <form action="#" class="success-form">
+                <input type="tel" class="success-form__number quiz-finish__text-number" placeholder="ваш номер" required>
+                <div class="success-form__buttons quiz-finish__text-buttons">
+                    <button class="success-form__button quiz-finish__text-button" type="submit">Нашел ошибку в номере, <br>хочу ввести корректный</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="urgent">
+    <div class="container">
+        <div class="urgent-inner">
+        <h2 class="urgent-title">Не хотите ждать или есть срочный вопрос?</h2>
+        <p class="urgent-description">Задайте ваши вопросы специалисту прямо сейчас по телефону или написать в мессенджер</p>
+        <ul class="urgent-list">
+            <li class="urgent-item">
+                <a class="urgent-item__tel" href="tel:+79009996863">+7 900 999 68 63</a>
+            </li>
+            <li class="urgent-item">
+                <button class="urgent-item__button">Написать в WhatsApp</button>
+            </li>
+        </ul>
+        </div>
+    </div>
+</section>
+<section class="address">
+    <div class="address-img">
+        <img src="images/address/address.avif" alt="" class="address-img__image">
+    </div>
+    <div class="container">
+        <div class="address-inner">
+            <div class="line-vertical"></div>
+            <h2 class="address-title">Ждем вас в детейлинг-студии</h2>
+            <div class="address-logo">
+                <img src="images/icons/logo.svg" alt="" class="address-logo__icon">
+            </div>
+            <p class="address-description">Ежедневно с 10:00 до 20:00 <br> без выходных</p>
+            <ul class="address-list">
+                <li class="address-item menu-list__item">
+                    <a class="map-icon" href="#">
+                        <img src="images/icons/map-icon.svg" alt="" class="map-icons__image">
+                    </a>
+                    <a href="#" class="map-text">Выборгское ш., 212,<br>корп. 12А</a>
+                    <span class="address-item__company">
+                        <span class="company-icon">
+                            <img src="images/icons/parnas.svg" alt="" class="company-icon__image">
+                        </span>
+                        <p class="company-text">Парнас</p>
+                    </span class="">
+                </li>
+                <li class="address-item menu-list__item">
+                    <a href="#" class="whatsapp">
+                        <img src="images/icons/whatsapp.svg" alt="" class="whatsapp-icon">
+                    </a>
+                    <div class="address-item__contacts contacts">
+                        <a href="tel:+79009996863" class="address-item__number contacts-number">+7 900 999 68 63</a>
+                        <a href="#" class="address-item__callback contacts-callback callback">Перезвоним за 1 минуту</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="map">
+    <div class="container">
+        <div class="map__inner">
+            <h2 class="map__title">Получите схему проезда и все контакты себе на телефон</h2>
+        </div>
+    </div>
+    <div class="map__item">
+            <div class="container">
+                <div class="map__item-inner">
+                    <div class="map__info">
+                        <div class="map__info-inner">
+                            <h3 class="map__info-title">Заполните форму ниже,</h3>
+                            <p class="map__info-description">чтобы получить подробную схему проезда в WhatsApp</p>
+                            <form action="#" class="map__info-form">
+                                <input type="tel" class="map-info__form-number quiz-finish__text-number" placeholder="Введите номер телефона" required>
+                                <button class="map__info-button quiz-finish__text-button" type="submit">Получить схему проезда <br>и все контакты себе в WhatsApp</button>
+                                <label class="map__info-agreements quiz-finish__text-agreements">
+                                    <input type="checkbox" class="map__info-agreement quiz-finish__text-agreement" required>
+                                    <span class="map__info-check quiz-finish__text-check"></span>
+                                    <p class="map__info-processing quiz-finish__text-processing">Я принимаю условия <a href="#">политики конфиденциальности</a></p>
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="yandex-map"></div>
+        </div>
+    </div>
+</section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="images/icons/logo.svg" alt="" class="footer-logo__icon">
+                <span class="logo-text">Детейлинг студия</span>
+            </div>
+            <ul class="footer-menu menu-list">
+                <li class="footer-menu__item menu-list__item">
+                    <a class="map-icon" href="#">
+                        <img src="images/icons/map-icon.svg" alt="" class="map-icons__image">
+                    </a>
+                    <a href="#" class="footer-menu__item-map map-text">Выборгское ш., 212,<br>корп. 12А</a>
+                </li>
+                <li class="footer-menu__item menu-list__item">
+                    <span class="company-icon">
+                    <img src="images/icons/parnas.svg" alt="" class="company-icon__image">
+                    </span>
+                    <p class="footer-menu__item-text company-text">Парнас</p>
+                </li>
+                <li class="footer-menu__item menu-list__item">
+                    <a href="#" class="whatsapp">
+                    <img src="images/icons/whatsapp.svg" alt="" class="whatsapp-icon">
+                    </a>
+                    <div class="footer-menu__item-contacts contacts">
+                    <a href="tel:+79009996863" class="footer-menu__item-number contacts-number">+7 900 999 68 63</a>
+                    <a href="#" class="contacts-callback callback">Перезвоним за 1 минуту</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="container">
+        <a href="#" class="footer-politics">Политика конфиденциальности</a>
+    </div>
+</footer>
+
+
+
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=default-sg-enplmreflrc8s0sj9lc1&lang=ru_RU" type="text/javascript"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>

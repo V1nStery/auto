@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <title>Главная страница</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <header class="header" style="background-color: gray;">
+      <div class="container">
+        <div class="header__inner">
+            <a href="/" class="logo">
+              <div class="logo-img">
+                <img src="images/icons/logo.svg" alt="" class="logo-img__image">
+              </div>
+              <span class="logo-text">Детейлинг студия</span>
+            </a>
+          <ul class="menu-list">
+            <li class="menu-list__item">
+                <a class="map-icon" href="#yandex-map">
+                  <img src="images/icons/map-icon.svg" alt="" class="map-icons__image">
+                </a>
+              <a href="#yandex-map" class="map-text">Выборгское ш., 212,<br>корп. 12А</a>
+            </li>
+            <li class="menu-list__item">
+              <span class="company-icon">
+                <img src="images/icons/parnas.svg" alt="" class="company-icon__image">
+              </span>
+              <p class="company-text">Парнас</p>
+            </li>
+            <li class="menu-list__item">
+              <a href="#reviews" class="map-logo">
+                <img class="map-logo__image" src="images/icons/yandexMaps.svg" alt="">
+              </a>
+              <a href="#reviews" class="map-star">
+                <img src="images/icons/map-star.svg" alt="" class="map-star__image">
+              </a>
+            </li>
+            <li class="menu-list__item">
+              <a href="#" class="whatsapp">
+                <img src="images/icons/whatsapp.svg" alt="" class="whatsapp-icon">
+              </a>
+              <div class="contacts">
+                <a href="tel:+79009996863" class="contacts-number">+7 900 999 68 63</a>
+                <a href="#" class="contacts-callback callback">Перезвоним за 1 минуту</a>
+              </div>
+            </li>
+          </ul>
+          <button class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="mobile-menu">
+    <button class="mobile-menu__close">✕</button>
+    <div class="mobile-menu__inner">
+        <div class="mobile-menu__item">
+            <a class="map-icon" href="#">
+                <img src="images/icons/map-icon.svg" alt="">
+            </a>
+            <a href="#" class="map-text">Выборгское ш., 212,<br>корп. 12А</a>
+        </div>
+        
+        <div class="mobile-menu__item">
+            <span class="company-icon">
+                <img src="images/icons/parnas.svg" alt="">
+            </span>
+            <p class="company-text">Парнас</p>
+        </div>
+        
+        <div class="mobile-menu__item">
+            <div class="map-logo">
+                <img src="images/icons/yandexMaps.svg" alt="">
+            </div>
+            <div class="map-star">
+                <img src="images/icons/map-star.svg" alt="">
+            </div>
+        </div>
+        
+        <div class="mobile-menu__item">
+            <div class="whatsapp">
+                <img src="images/icons/whatsapp.svg" alt="">
+            </div>
+            <div class="contacts">
+                <a href="tel:+79009996863" class="contacts-number">+7 900 999 68 63</a>
+                <a href="#" class="contacts-callback callback">Перезвоним за 1 минуту</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="menu-overlay"></div>
+        </div>
+      </div>
+    </header>
+
+<div class="callback-popup" id="callback-popup">
+    <div class="callback-popup__content">
+        <button class="callback-popup__close" aria-label="Закрыть"></button>
+        <div class="callback-popup__left">
+            <div class="callback-popup__left-inner">
+                <div class="callback-popup__top">
+                    <div class="callback-popup__top-icon">
+                        <img src="images/icons/avatar.svg" alt="" class="callback-popup__top-image">
+                    </div>
+                    <ul class="callback-popup__top-list">
+                        <li class="callback-popup__top-item">Имя Фамилия</li>
+                        <li class="callback-popup__top-item">служба заботы о клиентах</li>
+                    </ul>
+                </div>
+                <h3 class="callback-popup__left-title">Заполните форму ниже,</h3>
+                <p class="callback-popup__left-description">Наш специалист свяжется с вами в течение 5 минут или в удобное для вас время</p>
+                <div class="callback-popup__left-img">
+                    <img src="images/callback/tel.avif" alt="" class="callback-popup__left-image">
+                </div>
+            </div>
+        </div>
+        <div class="callback-popup__right">
+            <div class="callback-popup__right-inner">
+                <form class="callback-popup__form" id="finalForm">
+                    <input type="tel" class="callback-popup__form-number quiz-finish__text-number" placeholder="Введите номер телефона" required>
+                    <p class="callback-popup__form-text">Выберите способ связи:</p>
+                    <div class="callback-popup__form-way quiz-finish__text-way">
+                        <label class="callback-popup__form-choice quiz-finish__text-choice">
+                            <input 
+                                class="callback-popup__form-radio quiz-finish__text-radio" 
+                                type="radio" 
+                                name="connection"
+                                value="phone"
+                                aria-label="Связь по телефону"
+                            >
+                            <span class="callback-popup__form-span quiz-finish__text-span">
+                                Телефон<span class="tel" aria-hidden="true"></span>
+                            </span>
+                        </label>
+                        <label class="callback-popup__form-choice quiz-finish__text-choice">
+                            <input 
+                                class="callback-popup__form-radio quiz-finish__text-radio" 
+                                type="radio" 
+                                name="connection"
+                                value="whatsapp"
+                                aria-label="Связь через WhatsApp"
+                            >
+                            <span class="callback-popup__form-span quiz-finish__text-span">
+                                WhatsApp <span class="_whatsapp" aria-hidden="true"></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="error-message" id="connection-error">
+                        Пожалуйста, выберите способ связи
+                    </div>
+                    <p class="callback-popup__form-text">Выберите время звонка:</p>
+                    <div class="callback-popup__times">
+                        <label class="callback-popup__times-choice">
+                            <input 
+                                class="callback-popup__times-radio" 
+                                type="radio" 
+                                name="time"
+                                value="Now"
+                                aria-label="сейчас"
+                            >
+                            <span class="callback-popup__times-span">Сейчас</span>
+                        </label>
+                        <label class="callback-popup__times-choice">
+                            <input 
+                                class="callback-popup__times-radio" 
+                                type="radio" 
+                                name="time"
+                                value="InTime"
+                                aria-label="По времени"
+                            >
+                            <span class="callback-popup__times-span">По времени</span>
+                        </label>
+                    </div>
+                    <p class="callback-popup__form-text">Выберите время звонка:</p>
+                    <div class="callback-popup__form-times">
+                        <input type="text" class="callback-popup__form-time quiz-finish__text-number" placeholder="Например, завтра в 12:00">
+                        <div class="callback-popup__form-buttons quiz-finish__text-buttons">
+                            <button class="callback-popup__form-button quiz-finish__text-button" type="submit">Заказать обратный звонок</button>
+                        </div>
+                        <label class="callback-popup__form-agreements quiz-finish__text-agreements">
+                            <input type="checkbox" class="callback-popup__form-agreement quiz-finish__text-agreement" required>
+                            <span class="callback-popup__form-check quiz-finish__text-check"></span>
+                            <p class="callback-popup__form-processing quiz-finish__text-processing">Я принимаю условия <a href="#">политики конфиденциальности</a></p>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<main class="main">
+<section class="top">
+    <div class="container">
+        <div class="top__inner">
+            <div class="top-text">
+                <h1 class="top-text__title">Полная или частичная <span>оклейка автомобиля:</span></h1>
+                <div class="swipe swipe-top">
+                    <img src="images/volume/swipe.gif" alt="" class="swipe-gif">
+                </div>
+                <div class="top-text__images">
+                    <ul class="top-text__small">
+                        <li class="top-text__list">
+                            <a href="images/top/small-1-1.avif" class="top-text__img" data-fancybox="small-gallery">
+                                <img src="images/top/small-1.avif" alt="" class="top-text__img-image">
+                            </a>
+                            <p class="top-text__description">защитной бронепленкой</p>
+                        </li>
+                        <li class="top-text__list">
+                            <a href="images/top/small-2-2.avif" class="top-text__img" data-fancybox="small-gallery">
+                                <img src="images/top/small-2.avif" alt="" class="top-text__img-image">
+                            </a>
+                            <p class="top-text__description">цветным полиуретаном</p>
+                        </li>
+                        <li class="top-text__list">
+                            <a href="images/top/small-3-3.avif" class="top-text__img" data-fancybox="small-gallery">
+                                <img src="images/top/small-3.avif" alt="" class="top-text__img-image">
+                            </a>
+                            <p class="top-text__description">виниловой пленкой</p>
+                        </li>
+                    </ul>
+                    <div class="top-text__big">
+                        <a href="#" class="top-text__icon">
+                            <img src="images/icons/gift-1.svg" alt="" class="top-text__icon-image">
+                        </a>
+                        <div class="top-text__inner">
+                            <p class="top-text__inner-text">Оклейка фар бронепленкой в подарок</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-text__buttons">
+                    <button class="top-text__buttons-quiz">Подобрать пленку <br> и рассчитать стоимость</button>
+                    <button class="top-text__buttons-whatsapp">Рассчитать в WhatsApp<span><img src="images/icons/whatsapp.svg" alt=""></span></button>
+                </div>
+            </div>
+            <div class="top-video">
+                <a href="https://www.youtube.com/embed/dQw4w9WgXcQ" class="top-video__play play" data-fancybox="top-video"></a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="video-popup" id="videoPopup">
+        <div class="video-popup__content">
+            <span class="video-popup__close" id="videoClose">&times;</span>
+            <iframe class="video-popup__iframe" 
+                    id="videoFrame"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+<section class="types">
+    <div class="container">
+        <div class="types-inner">
+            <h2 class="types-title">Проводим оклейку любыми видами пленок —</h2>
+            <p class="types-description">от базовой защиты до эксклюзивного дизайна</p>
+            <div class="types-cards scrolls">
+                <div class="types-card">
+                    <div class="types-card__inner">
+                        <a href="images/types/types-card-1-1.avif" class="types-card__img" data-fancybox="type-gallery">
+                            <img src="images/types/types-card-1.avif" alt="" class="types-card__img-image">
+                        </a>
+                        <h3 class="types-card__title">Прозрачная защитная плёнка</h3>
+                        <ul class="types-card__list">
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Абсолютно прозрачная — незаметна на кузове</p>
+                            </li>
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Защищает от сколов, царапин, реагентов</p>
+                            </li>
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Сохраняет блеск и насыщенность заводской краски</p>
+                            </li>
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Самозаживление при мелких повреждениях</p>
+                            </li>
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Срок службы — более 10 лет</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="types-card">
+                    <div class="types-card__inner">
+                        <a href="images/types/types-card-2-2.avif" class="types-card__img" data-fancybox="type-gallery">
+                            <img src="images/types/types-card-2.avif" alt="" class="types-card__img-image">
+                        </a>
+                        <h3 class="types-card__title">Матовая полиуретановая плёнка</h3>
+                        <ul class="types-card__list">
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Превращает глянец в стильный мат без перекраски</p>
+                            </li>
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Идеальный выбор для премиальных авто</p>
+                            </li>
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Сохраняет структуру, защищает от внешнего воздействия</p>
+                            </li>
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Смотрится дорого и минималистично</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="types-card">
+                    <div class="types-card__inner">
+                        <a href="images/types/types-card-3-3.avif" class="types-card__img" data-fancybox="type-gallery">
+                            <img src="images/types/types-card-3.avif" alt="" class="types-card__img-image">
+                        </a>
+                        <h3 class="types-card__title">Цветной полиуретан</h3>
+                        <ul class="types-card__list">
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Цветная защитная плёнка любого оттенка</p>
+                            </li>
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Идеальна для полного преображения авто с сохранением защитных свойств</p>
+                            </li>
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Плотная и стойкая к реагентам</p>
+                            </li>
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Не выгорает и не мутнеет со временем</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="types-card">
+                    <div class="types-card__inner">
+                        <a href="images/types/types-card-4-4.avif" class="types-card__img" data-fancybox="type-gallery">
+                            <img src="images/types/types-card-4.avif" alt="" class="types-card__img-image">
+                        </a>
+                        <h3 class="types-card__title">Виниловые плёнки</h3>
+                        <ul class="types-card__list">
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Широкий выбор текстур: глянец, мат, металлик, карбон, хамелеон</p>
+                            </li>
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Идеальны для частичной или полной оклейки</p>
+                            </li>
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Легко демонтируются без следов</p>
+                            </li>
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Хороший вариант для обновления авто без дорогой перекраски</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="types-card">
+                    <div class="types-card__inner">
+                        <a href="images/types/types-card-5-5.avif" class="types-card__img" data-fancybox="type-gallery">
+                            <img src="images/types/types-card-5.avif" alt="" class="types-card__img-image">
+                        </a>
+                        <h3 class="types-card__title">Специальные плёнки</h3>
+                        <ul class="types-card__list">
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Перламутровые пленки</p>
+                            </li>
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Винилография</p>
+                            </li>
+                            <li class="types-card__item">
+                                <p class="types-card__item-text">Камуфляж и другие фактуры</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="volume">
+    <div class="line"></div>
+    <div class="blur"></div>
+    <div class="container">
+        <div class="volume-inner">
+            <h2 class="volume-title">От полной защиты кузова до локального бронирования зон риска</h2>
+            <div class="swipe">
+                <img src="images/volume/swipe.gif" alt="" class="swipe-gif">
+            </div>
+            <div class="volume-cards">
+                <div class="volume-card">
+                    <div class="volume-card__inner">
+                        <div class="volume-card__text">
+                            <h3 class="volume-card__title">Полная оклейка кузова</h3>
+                            <p class="volume-card__description">Максимальная защита + идеальный внешний вид</p>
+                            <ul class="volume-card__list">
+                                <li class="volume-card__item">Защищает весь кузов от сколов, реагентов, царапин</li>
+                                <li class="volume-card__item">Полностью сохраняет заводскую краску</li>
+                                <li class="volume-card__item">Самозаживляющийся эффект от микроповреждений</li>
+                                <li class="volume-card__item">Идеальна для новых авто и премиум-класса</li>
+                            </ul>
+                        </div>
+                        <button class="volume-card__button">Рассчитать стоимость<br> полной оклейки</button>
+                    </div>
+                </div>
+                <div class="volume-card">
+                    <div class="volume-card__inner">
+                        <div class="volume-card__text">
+                            <h3 class="volume-card__title">Оклейка зон риска</h3>
+                            <p class="volume-card__description">Только важные элементы — экономично <br>и эффективно</p>
+                            <ul class="volume-card__list">
+                                <li class="volume-card__item">Капот, бампер, фары, зеркала, пороги, арки</li>
+                                <li class="volume-card__item">Закрывает зоны, подверженные наибольшему износу</li>
+                                <li class="volume-card__item">Оптимальный баланс цены и пользы</li>
+                                <li class="volume-card__item">Быстрый монтаж — от 4 часов</li>
+                            </ul>
+                        </div>
+                        <button class="volume-card__button">Рассчитать стоимость<br> полной оклейки</button>
+                    </div>
+                </div>
+                <div class="volume-card">
+                    <div class="volume-card__inner">
+                        <div class="volume-card__text">
+                            <h3 class="volume-card__title">Оклейка отдельных элементов</h3>
+                            <p class="volume-card__description">Идеально для визуального обновления и защиты ключевых зон</p>
+                            <ul class="volume-card__list">
+                                <li class="volume-card__item">Изменение цвета крыши</li>
+                                <li class="volume-card__item">Нанесение пленки под карбон</li>
+                                <li class="volume-card__item">Тонировка фар</li>
+                            </ul>
+                        </div>
+                        <button class="volume-card__button">Рассчитать стоимость<br> полной оклейки</button>
+                    </div>
+                </div>
+                <div class="volume-card">
+                    <div class="volume-card__inner">
+                        <div class="volume-card__text">
+                            <h3 class="volume-card__title">Антихром и декоративная оклейка</h3>
+                            <p class="volume-card__description">Улучшение эстетики внешнего вида + защита элементов</p>
+                            <ul class="volume-card__list">
+                                <li class="volume-card__item">Удаление заводского хрома — замена на чёрный глянец, мат, сатин или под карбон</li>
+                                <li class="volume-card__item">Полная оклейка: решётка радиатора, молдинги, оконные рамки, накладки на зеркала, шильдики</li>
+                            </ul>
+                        </div>
+                        <button class="volume-card__button">Рассчитать стоимость<br> полной оклейки</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="quiz" id="quiz">
+    <div class="container">
+            <div class="quiz-inner">
+                <h2 class="quiz-title">Подберем пленку и рассчитаем стоимость оклейки</h2>
+                <p class="quiz-description">+ защита фар в подарок при заказе любого вида оклейки</p>
+                <div class="quiz-block">
+                    <div class="quiz-block__img">
+                        <img src="images/quiz/quiz.avif" alt="Выбор пленки" class="quiz-block__img-image active" id="img1">
+                        <img src="images/quiz/quiz.avif" alt="Виды оклейки" class="quiz-block__img-image" id="img2">
+                        <img src="images/quiz/quiz.avif" alt="Сроки оклейки" class="quiz-block__img-image" id="img3">
+                    </div>
+                    <div class="quiz-block__text">
+                        <!-- Вопрос 1 -->
+                        <div class="quiz-block__inner active" id="question1">
+                            <div class="quiz-block__progress">
+                                <div class="quiz-block__progress-text-cont">
+                                    <p class="quiz-block__progress-text">Вопрос 1 из 3</p>
+                                </div>
+                                <div class="quiz-block__progress-value" id="progress1"></div>
+                            </div>
+                            <h3 class="quiz-block__title">01. Для каких целей вы хотите оклеить автомобиль?</h3>
+                            <form class="quiz-block__form" action="#">
+                                <label class="quiz-block__form-label">
+                                    <div class="quiz-block__form-inner">
+                                        <input class="quiz-block__form-radio" type="radio" name="choice1" value="new">
+                                        <span class="quiz-block__form-span">&#10004;</span>
+                                        <p class="quiz-block__form-answer">Новый авто, хочется сохранить в идеале</p>
+                                    </div>
+                                </label>
+                                <label class="quiz-block__form-label">
+                                    <div class="quiz-block__form-inner">
+                                        <input class="quiz-block__form-radio" type="radio" name="choice1" value="good">
+                                        <span class="quiz-block__form-span">&#10004;</span>
+                                        <p class="quiz-block__form-answer">Машина в хорошем состоянии, хочу обновить облик/защитить покрытие</p>
+                                    </div>
+                                </label>
+                                <label class="quiz-block__form-label">
+                                    <div class="quiz-block__form-inner">
+                                        <input class="quiz-block__form-radio" type="radio" name="choice1" value="scratches">
+                                        <span class="quiz-block__form-span">&#10004;</span>
+                                        <p class="quiz-block__form-answer">Есть мелкие царапины, нужна защита и «освежение»</p>
+                                    </div>
+                                </label>
+                                <label class="quiz-block__form-label">
+                                    <div class="quiz-block__form-inner">
+                                        <input class="quiz-block__form-radio" type="radio" name="choice1" value="dontknow">
+                                        <span class="quiz-block__form-span">&#10004;</span>
+                                        <p class="quiz-block__form-answer">Затрудняюсь ответить</p>
+                                    </div>
+                                </label>
+                                <div class="quiz-block__form-buttons">
+                                    <button class="quiz-block__form-button" type="button" onclick="nextQuestion()">На следующий шаг  &#8250; &#8250; &#8250;</button>
+                                    <p class="error-message">Пожалуйста, выберите один из вариантов</p>
+                                </div>
+                            </form>
+                        </div>
+    
+                        <!-- Вопрос 2 -->
+                        <div class="quiz-block__inner" id="question2">
+                            <div class="quiz-block__progress">
+                                <div class="quiz-block__progress-text-cont">
+                                    <p class="quiz-block__progress-text">Вопрос 2 из 3</p>
+                                </div>
+                                <div class="quiz-block__progress-value" id="progress2"></div>
+                            </div>
+                            <h3 class="quiz-block__title">02. Какой вид оклейки вас интересует?</h3>
+                            <form class="quiz-block__form" action="#">
+                                <label class="quiz-block__form-label">
+                                    <div class="quiz-block__form-inner">
+                                        <input class="quiz-block__form-radio" type="radio" name="choice2" value="complete">
+                                        <span class="quiz-block__form-span">&#10003;</span>
+                                        <p class="quiz-block__form-answer">Полная оклейка автомобиля</p>
+                                    </div>
+                                </label>
+                                <label class="quiz-block__form-label">
+                                    <div class="quiz-block__form-inner">
+                                        <input class="quiz-block__form-radio" type="radio" name="choice2" value="put">
+                                        <span class="quiz-block__form-span">&#10003;</span>
+                                        <p class="quiz-block__form-answer">Убрать хром, сделать матовый или агрессивный стиль</p>
+                                    </div>
+                                </label>
+                                <label class="quiz-block__form-label">
+                                    <div class="quiz-block__form-inner">
+                                        <input class="quiz-block__form-radio" type="radio" name="choice2" value="protection">
+                                        <span class="quiz-block__form-span">&#10003;</span>
+                                        <p class="quiz-block__form-answer">Защита зон риска: капот, бампер, фары и пр.</p>
+                                    </div>
+                                </label>
+                                <label class="quiz-block__form-label">
+                                    <div class="quiz-block__form-inner">
+                                        <input class="quiz-block__form-radio" type="radio" name="choice2" value="dontknow">
+                                        <span class="quiz-block__form-span">&#10003;</span>
+                                        <p class="quiz-block__form-answer">Затрудняюсь ответить</p>
+                                    </div>
+                                </label>
+                                <div class="quiz-block__form-buttons">
+                                    <button class="quiz-block__form-button" type="button" onclick="nextQuestion()">На следующий шаг  &#8250; &#8250; &#8250;</button>
+                                    <p class="error-message">Пожалуйста, выберите один из вариантов</p>
+                                </div>
+                                
+                            </form>
+                        </div>
+    
+                        <!-- Вопрос 3 -->
+                        <div class="quiz-block__inner" id="question3">
+                            <div class="quiz-block__progress">
+                                <div class="quiz-block__progress-text-cont">
+                                    <p class="quiz-block__progress-text">Вопрос 3 из 3</p>
+                                </div>
+                                <div class="quiz-block__progress-value" id="progress3"></div>
+                            </div>
+                            <h3 class="quiz-block__title">03. Когда вы хотели бы&ensp;провести оклейку?</h3>
+                            <form class="quiz-block__form" action="#">
+                                <label class="quiz-block__form-label">
+                                    <div class="quiz-block__form-inner">
+                                        <input class="quiz-block__form-radio" type="radio" name="choice3" value="soon">
+                                        <span class="quiz-block__form-span">&#10004;</span>
+                                        <p class="quiz-block__form-answer">В ближайшее время</p>
+                                    </div>
+                                </label>
+                                <label class="quiz-block__form-label">
+                                    <div class="quiz-block__form-inner">
+                                        <input class="quiz-block__form-radio" type="radio" name="choice3" value="month">
+                                        <span class="quiz-block__form-span">&#10004;</span>
+                                        <p class="quiz-block__form-answer">Через месяц или более</p>
+                                    </div>
+                                </label>
+                                <label class="quiz-block__form-label">
+                                    <div class="quiz-block__form-inner">
+                                        <input class="quiz-block__form-radio" type="radio" name="choice3" value="within">
+                                        <span class="quiz-block__form-span">&#10004;</span>
+                                        <p class="quiz-block__form-answer">В течение месяца</p>
+                                    </div>
+                                </label>
+                                <label class="quiz-block__form-label">
+                                    <div class="quiz-block__form-inner">
+                                        <input class="quiz-block__form-radio" type="radio" name="choice3" value="dontknow">
+                                        <span class="quiz-block__form-span">&#10004;</span>
+                                        <p class="quiz-block__form-answer">Затрудняюсь ответить</p>
+                                    </div>
+                                </label>
+                                <div class="quiz-block__form-buttons">
+                                    <button class="quiz-block__form-button" type="button" onclick="finishQuiz()">На следующий шаг  &#8250; &#8250; &#8250;</button>
+                                    <p class="error-message">Пожалуйста, выберите один из вариантов</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quiz-finish" id="quizFinish">
+                    <div class="quiz-finish__inner">
+                        <h3 class="quiz-finish__title">Спасибо за ответы! Специалист уже приступил к формированию стоимости</h3>
+                        <div class="quiz-finish__cont">
+                            <div class="quiz-finish__text">
+                                <p class="quiz-finish__text-description">Оставьте контакты и получите:</p>
+                                <ul class="quiz-finish__text-list">
+                                    <li class="quiz-finish__text-item">стоимость оклейки по выбранным параметрам</li>
+                                    <li class="quiz-finish__text-item"><b>подарок:</b> защита фар при заказе любого вида оклейки</li>
+                                </ul>
+                                <p class="quiz-finish__text-question">Каким способом вам удобнее получить информацию от специалиста?</p>
+                                <form action="#" class="quiz-finish__text-form" id="finalForm">
+                                    <div class="quiz-finish__text-way">
+                                        <label class="quiz-finish__text-choice">
+                                            <input 
+                                                class="quiz-finish__text-radio" 
+                                                type="radio" 
+                                                name="connection"
+                                                value="phone"
+                                                aria-label="Связь по телефону"
+                                            >
+                                            <span class="quiz-finish__text-span">
+                                                Телефон<span class="tel" aria-hidden="true"></span>
+                                            </span>
+                                        </label>
+                                        <label class="quiz-finish__text-choice">
+                                            <input 
+                                                class="quiz-finish__text-radio" 
+                                                type="radio" 
+                                                name="connection"
+                                                value="whatsapp"
+                                                aria-label="Связь через WhatsApp"
+                                            >
+                                            <span class="quiz-finish__text-span">
+                                                WhatsApp <span class="_whatsapp" aria-hidden="true"></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="error-message" id="connection-error">
+                                            Пожалуйста, выберите способ связи
+                                    </div>
+                                    <input type="tel" class="quiz-finish__text-number" placeholder="Введите номер телефона" required>
+                                    <div class="quiz-finish__text-buttons">
+                                        <button class="quiz-finish__text-button" type="submit">Получить расчет<br> стоимости + подарок</button>
+                                    </div>
+                                    <label class="quiz-finish__text-agreements">
+                                        <input type="checkbox" class="quiz-finish__text-agreement" required>
+                                        <span class="quiz-finish__text-check"></span>
+                                        <p class="quiz-finish__text-processing">Я принимаю условия <a href="#">политики конфиденциальности</a></p>
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="quiz-finish__img">
+                                <img src="images/quiz/phone.avif" alt="Защита фар в подарок" class="quiz-finish__img-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<section class="manufacturer">
+    <div class="container">
+        <div class="manufacturer-inner">
+            <h2 class="manufacturer-title">Работаем только с проверенными производителями плёнки,</h2>
+            <p class="manufacturer-description">которым доверяют профессионалы по всему миру</p>
+            <div class="swipe">
+                <img src="images/volume/swipe.gif" alt="" class="swipe-gif">
+            </div>
+            <div class="manufacturer-cards">
+                <div class="manufacturer-card">
+                    <div class="manufacturer-card__inner">
+                        <div class="manufacturer-card__img">
+                            <img src="images/manufacturer/manufacturer-1.svg" alt="magnum" class="manufacturer-card__img-image">
+                        </div>
+                        <div class="manufacturer-card__text">
+                            <p class="manufacturer-card__text__description">Плотная и прочная плёнка с выраженными само-заживляющимися свойствами</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="manufacturer-card">
+                    <div class="manufacturer-card__inner">
+                        <div class="manufacturer-card__img">
+                            <img src="images/manufacturer/manufacturer-2.svg" alt="magnum" class="manufacturer-card__img-image">
+                        </div>
+                        <div class="manufacturer-card__text">
+                            <p class="manufacturer-card__text__description">Плёнка премиального уровня с высоким глянцем и стойкостью к ультрафиолету</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="manufacturer-card">
+                    <div class="manufacturer-card__inner">
+                        <div class="manufacturer-card__img">
+                            <img src="images/manufacturer/manufacturer-3.svg" alt="magnum" class="manufacturer-card__img-image">
+                        </div>
+                        <div class="manufacturer-card__text">
+                            <p class="manufacturer-card__text__description">Плёнка с максимальной устойчивостью к внешним повреждениям и химии</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="manufacturer-card">
+                    <div class="manufacturer-card__inner">
+                        <div class="manufacturer-card__img">
+                            <img src="images/manufacturer/manufacturer-4.svg" alt="magnum" class="manufacturer-card__img-image">
+                        </div>
+                        <div class="manufacturer-card__text">
+                            <p class="manufacturer-card__text__description">Цветные полиуретановые плёнки и решения для нестандартного стайлинга</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="manufacturer-card">
+                    <div class="manufacturer-card__inner">
+                        <div class="manufacturer-card__img">
+                            <img src="images/manufacturer/manufacturer-5.svg" alt="magnum" class="manufacturer-card__img-image">
+                        </div>
+                        <div class="manufacturer-card__text">
+                            <p class="manufacturer-card__text__description">Прочная защитная плёнка, хорошо&nbsp;подходит для частичной&nbsp;оклейки и зон риска</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="manufacturer-card">
+                    <div class="manufacturer-card__inner">
+                        <div class="manufacturer-card__img">
+                            <img src="images/manufacturer/manufacturer-6.svg" alt="magnum" class="manufacturer-card__img-image">
+                        </div>
+                        <div class="manufacturer-card__text">
+                            <p class="manufacturer-card__text__description">Ультрапрозрачная<br> пленка премиум-сегмента с возможностью нанесения антигрязевого покрытия</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="manufacturer-card">
+                    <div class="manufacturer-card__inner">
+                        <div class="manufacturer-card__img">
+                            <img src="images/manufacturer/manufacturer-7.svg" alt="magnum" class="manufacturer-card__img-image">
+                        </div>
+                        <div class="manufacturer-card__text">
+                            <p class="manufacturer-card__text__description">Технологичная<br> плёнка с балансом<br> цены и качества</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="manufacturer-card">
+                    <div class="manufacturer-card__inner">
+                        <div class="manufacturer-card__img">
+                            <img src="images/manufacturer/manufacturer-8.svg" alt="magnum" class="manufacturer-card__img-image">
+                        </div>
+                        <div class="manufacturer-card__text">
+                            <p class="manufacturer-card__text__description">Материалы с высокой эластичностью, которые идеально ложатся даже на сложные формы кузова</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="manufacturer-buttons">
+                <a href="#quiz" class="manufacturer-button">Подобрать пленку за 3 шага</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="background-1"></section>
+<section class="stages">
+    <div class="container">
+        <div class="stages-inner">
+            <h2 class="stages-title">Технологичный подход к оклейке</h2>
+            <p class="stages-description">с контролем на каждом этапе</p>
+            <div class="swipe">
+                <img src="images/volume/swipe.gif" alt="" class="swipe-gif">
+            </div>
+            <div class="stages-cards scrolls">
+
+                <div class="stages-min">
+                    <div class="stages-min__inner">
+                        <h3 class="stages-min__title">Фиксируем внешний вид до старта работ</h3>
+                        <p class="stages-min__description">Перед началом делаем фото- и видеосъёмку состояния кузова и всех элементов</p>
+                    </div>
+                </div>
+
+                <div class="stages-min">
+                    <div class="stages-min__inner">
+                        <h3 class="stages-min__title">Аккуратная и точная разборка строго по регламенту —</h3>
+                        <p class="stages-min__description">используем методы разборки официальных дилеров</p>
+                    </div>
+                </div>
+
+                <div class="stages-min">
+                    <div class="stages-min__inner">
+                        <h3 class="stages-min__title">Оклейка по стандартам производителей плёнки</h3>
+                        <p class="stages-min__description">Используем профессиональные шаблоны, выверенные технологии и контрольные замеры</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swipe">
+                <img src="images/volume/swipe.gif" alt="" class="swipe-gif">
+            </div>
+            <div class="stages-cards scrolls">
+                <div class="stages-big">
+                    <div class="stages-big__icon icon-blue">
+                        <img class="stages-big__icon-images" src="images/icons/messages.svg" alt="Сообщения">
+                    </div>
+                    <div class="stages-big__inner">
+                        <h3 class="stages-big__title">Регулярный фото- и видеоотчёт в мессенджере</h3>
+                        <p class="stages-big__description">Вы получаете отчёты о ходе работ — <br>фото, видео и текст с краткими пояснениями</p>
+                        <p class="stages-big__advice">Можете удалённо&nbsp;контролировать каждый этап, согласовывать дополнительные пожелания или уточнять детали</p>
+                    </div>
+                </div>
+                
+                <div class="stages-big">
+                    <div class="stages-big__icon icon-blue">
+                        <img class="stages-big__icon-images" src="images/icons/crown.svg" alt="корона">
+                    </div>
+                    <div class="stages-big__inner">
+                        <h3 class="stages-big__title">Финальная проверка<br> и сверка результата</h3>
+                        <ul class="stages-big__list">
+                            <li class="stages-big__item">Идеально ровные и точные линии реза</li>
+                            <li class="stages-big__item">Полная чистота поверхности под плёнкой</li>
+                            <li class="stages-big__item">Гладкое покрытие без единого пузыря или вздутия</li>
+                            <li class="stages-big__item">Аккуратная укладка плёнки с соблюдением всех изгибов и форм</li>
+                            <li class="stages-big__item">Отсутствие клеевых следов, подтёков и натяжений на краях</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="slider">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <!-- Слайды -->
+            <div class="swiper-slide">
+                <a href="images/slider/slider-1-1.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-1.avif" alt="" class="slider-slide__img-image">
+                </a> 
+                <a href="images/slider/slider-1-2.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-2.avif" alt="" class="slider-slide__img-image">
+                </a> 
+                <a href="images/slider/slider-1-3.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-3.avif" alt="" class="slider-slide__img-image">
+                </a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="images/slider/slider-1-1.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-1.avif" alt="" class="slider-slide__img-image">
+                </a> 
+                <a href="images/slider/slider-1-2.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-2.avif" alt="" class="slider-slide__img-image">
+                </a> 
+                <a href="images/slider/slider-1-3.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-3.avif" alt="" class="slider-slide__img-image">
+                </a> 
+            </div>
+
+            <div class="swiper-slide">
+                <a href="images/slider/slider-1-1.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-1.avif" alt="" class="slider-slide__img-image">
+                </a> 
+                <a href="images/slider/slider-1-2.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-2.avif" alt="" class="slider-slide__img-image">
+                </a> 
+                <a href="images/slider/slider-1-3.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-3.avif" alt="" class="slider-slide__img-image">
+                </a> 
+            </div>
+
+            <div class="swiper-slide">
+                <a href="images/slider/slider-1-1.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-1.avif" alt="" class="slider-slide__img-image">
+                </a> 
+                <a href="images/slider/slider-1-2.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-2.avif" alt="" class="slider-slide__img-image">
+                </a> 
+                <a href="images/slider/slider-1-3.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-3.avif" alt="" class="slider-slide__img-image">
+                </a> 
+            </div>
+
+            <div class="swiper-slide">
+                <a href="images/slider/slider-1-1.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-1.avif" alt="" class="slider-slide__img-image">
+                </a> 
+                <a href="images/slider/slider-1-2.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-2.avif" alt="" class="slider-slide__img-image">
+                </a> 
+                <a href="images/slider/slider-1-3.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-3.avif" alt="" class="slider-slide__img-image">
+                </a> 
+            </div>
+
+            <div class="swiper-slide">
+                <a href="images/slider/slider-1-1.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-1.avif" alt="" class="slider-slide__img-image">
+                </a> 
+                <a href="images/slider/slider-1-2.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-2.avif" alt="" class="slider-slide__img-image">
+                </a> 
+                <a href="images/slider/slider-1-3.avif"  data-fancybox="slider-gallery" class="slider-slide__img">
+                    <img src="images/slider/slider-1-3.avif" alt="" class="slider-slide__img-image">
+                </a> 
+            </div>
+            
+            <!-- Повторить структуру для остальных 5 слайдов -->
+        </div>
+        
+        <!-- Кнопки навигации -->
+        <div class="slider-buttons">
+            <div class="slider-button swiper-button-prev">
+                <img class="slider-button__image" src="images/icons/prew.svg" alt="назад">
+            </div>
+            <div class="slider-button swiper-button-next">
+                <img class="slider-button__image" src="images/icons/next.svg" alt="вперед">
+            </div>
+        </div>
+        
+        <!-- Пагинация -->
+        <div class="slider-dots swiper-pagination"></div>
+    </div>
+</section>
+<section class="booking">
+    <div class="container">
+        <div class="booking-inner">
+            <h2 class="booking-title">Получите <br><span>бронирование фар в подарок</span></h2>
+            <p class="booking-description">Чтобы получить бронирование в подарок, <span>введите номер телефона</span></p>
+            <div class="booking-attention">
+                <div class="booking-attention__inner">
+                    <div class="booking-attention__icon">
+                        <img src="images/icons/gift-2.svg" alt="" class="booking-attention__icon-image">
+                    </div>
+                    <p class="booking-attention__text">при заказе полной или частичной оклейки</p>
+                </div>
+            </div>
+            <form class="booking-form" action="#">
+                <input type="tel" class="booking-form__number quiz-finish__text-number" placeholder="Введите номер телефона" required>
+                <div class="booking-form__buttons quiz-finish__text-buttons">
+                    <button class="booking-form__button quiz-finish__text-button" type="submit">Получить бронирование фар<br>в подарок к оклейке</button>
+                </div>
+                <label class="booking-form__agreements quiz-finish__text-agreements">
+                    <input type="checkbox" class="booking-form__agreement quiz-finish__text-agreement" required>
+                    <span class="booking-form__check quiz-finish__text-check"></span>
+                    <p class="booking-form__processing quiz-finish__text-processing">Я принимаю условия <a href="#">политики конфиденциальности</a></p>
+                </label>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="guarantees">
+    <div class="container">
+        <div class="guarantees-inner">
+            <h2 class="guarantees-title">Предоставляем 4 гарантии на оклейку</h2>
+            <div class="swipe">
+                <img src="images/volume/swipe.gif" alt="" class="swipe-gif">
+            </div>
+            <div class="guarantees-cards">
+                <div class="guarantees-card">
+                    <div class="guarantees-card__img">
+                        <img src="images/guarantees/guarantees-card-1.avif" alt="" class="guarantees-card__img-image">
+                        <div class="guarantees-card__icon icon-blue">
+                            <img src="images/icons/guarantees-icon-1.svg" alt="" class="guarantees-card__icon-image">
+                        </div>
+                    </div>
+                    <div class="guarantees-card__text">
+                        <h3 class="guarantees-card__title">Бессрочная гарантия на сохранение цвета</h3>
+                        <p class="guarantees-card__description">Цветная плёнка:</p>
+                        <ul class="guarantees-card__list">
+                            <li class="guarantees-card__item">НЕ выгорит</li>
+                            <li class="guarantees-card__item">НЕ пожелтеет</li>
+                            <li class="guarantees-card__item">НЕ потускнеет</li>
+                        </ul>
+                        <p class="guarantees-card__description">Мы используем только оригинальные материалы с защитой от УФ-лучей</p>
+                    </div>
+                </div>
+
+                <div class="guarantees-card">
+                    <div class="guarantees-card__img">
+                        <img src="images/guarantees/guarantees-card-2.avif" alt="" class="guarantees-card__img-image">
+                        <div class="guarantees-card__icon icon-blue">
+                            <img src="images/icons/guarantees-icon-2.svg" alt="" class="guarantees-card__icon-image">
+                        </div>
+                    </div>
+                    <div class="guarantees-card__text">
+                        <h3 class="guarantees-card__title">Гарантия на качество нанесения</h3>
+                        <p class="guarantees-card__description">Все детали будут идеально подогнаны, без перекосов, неровностей и растяжек</p>
+                    </div>
+                </div>
+
+                <div class="guarantees-card">
+                    <div class="guarantees-card__img">
+                        <img src="images/guarantees/guarantees-card-3.avif" alt="" class="guarantees-card__img-image">
+                        <div class="guarantees-card__icon icon-blue">
+                            <img src="images/icons/guarantees-icon-3.svg" alt="" class="guarantees-card__icon-image">
+                        </div>
+                    </div>
+                    <div class="guarantees-card__text">
+                        <h3 class="guarantees-card__title">Гарантия на отсутствие пузырей и отслоений</h3>
+                        <p class="guarantees-card__description">При соблюдении стандартных условий эксплуатации&nbsp;— никаких дефектов.</p>
+                        <p class="guarantees-card__description">Плёнка будет&nbsp;держаться&nbsp;так, как должна</p>
+                    </div>
+                </div>
+
+                <div class="guarantees-card">
+                    <div class="guarantees-card__img">
+                        <img src="images/guarantees/guarantees-card-4.avif" alt="" class="guarantees-card__img-image">
+                        <div class="guarantees-card__icon icon-blue">
+                            <img src="images/icons/guarantees-icon-4.svg" alt="" class="guarantees-card__icon-image">
+                        </div>
+                    </div>
+                    <div class="guarantees-card__text">
+                        <h3 class="guarantees-card__title">Гарантия на герметичность и защитные свойства</h3>
+                        <p class="guarantees-card__description">Плёнка надёжно защищает от сколов, химии и реагентов</p>
+                        <p class="guarantees-card__description">Влага не проникает под поверхность</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guarantees-big">
+                <p class="guarantees-big__text">Если с покрытием что-то случится, мы <span>бесплатно устраним любые недочёты</span> в течение 1 дня</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="background-2"></section>
+
+<section id="reviews" class="reviews">
+    <div class="container">
+        <div class="reviews-inner">
+            <div class="reviews-title">
+                <div class="reviews-title__img">
+                    <img src="images/icons/map-star.svg" alt="" class="reviews-title__img-image">
+                </div>
+                <h2 class="reviews-title__text">Нам доверяют:<br>оценка 5.0 на 
+                    <span class="reviews-title__text-span">
+                        <img src="images/icons/yandexMaps-1.svg" alt="" class="reviews-title__text-image">
+                    </span>
+                </h2>
+            </div>
+            <div class="reviews-swipe swipe">
+                <img src="images/volume/swipe.gif" alt="" class="swipe-gif">
+            </div>
+            <div class="reviews-statistics scrolls">
+                <div class="reviews-statistics-value">
+                    <img src="images/reviews/statistic-1.avif" alt="" class="reviews-statistics-value__image">
+                </div>
+                <div class="reviews-statistics-value">
+                    <img src="images/reviews/statistic-2.avif" alt="" class="reviews-statistics-value__image">
+                </div>
+                <div class="reviews-statistics-value">
+                    <img src="images/reviews/statistic-3.avif" alt="" class="reviews-statistics-value__image">
+                </div>
+                <div class="reviews-statistics-value">
+                    <img src="images/reviews/statistic-4.avif" alt="" class="reviews-statistics-value__image">
+                </div>
+                <div class="reviews-statistics-value">
+                    <img src="images/reviews/statistic-5.avif" alt="" class="reviews-statistics-value__image">
+                </div>
+            </div>
+            <div class="reviews-list__inner">
+                <div class="reviews-list">
+                    <div class="reviews-list__review">
+                        <img src="images/reviews/review-1.avif" alt="" class="reviews-list__review-image">
+                    </div>
+                    <div class="reviews-list__review">
+                        <img src="images/reviews/review-2.avif" alt="" class="reviews-list__review-image">
+                    </div>
+                    <div class="reviews-list__review">
+                        <img src="images/reviews/review-3.avif" alt="" class="reviews-list__review-image">
+                    </div>
+                </div>
+                <div class="reviews-list">
+                    <div class="reviews-list__review">
+                        <img src="images/reviews/review-4.avif" alt="" class="reviews-list__review-image">
+                    </div>
+                    <div class="reviews-list__review">
+                        <img src="images/reviews/review-5.avif" alt="" class="reviews-list__review-image">
+                    </div>
+                </div>
+                <div class="reviews-list">
+                    <div class="reviews-list__review">
+                        <img src="images/reviews/review-6.avif" alt="" class="reviews-list__review-image">
+                    </div>
+                    <div class="reviews-list__review">
+                        <img src="images/reviews/review-7.avif" alt="" class="reviews-list__review-image">
+                    </div>
+                    <div class="reviews-list__review">
+                        <img src="images/reviews/review-8.avif" alt="" class="reviews-list__review-image">
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-buttons">
+                <button class="reviews-button">Показать все</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="videos">
+    <div class="container">
+        <div class="videos-inner">
+            <h2 class="videos-title">Или посмотрите, что говорят клиенты о качестве оклейки</h2>
+            <p class="videos-description">сразу после получения автомобиля</p>
+            <div class="swipe">
+                <img src="images/volume/swipe.gif" alt="" class="swipe-gif">
+            </div>
+            <div class="videos-cards">
+                <div class="videos-card">
+                    <a href="https://www.youtube.com/watch?v=vx2u5uUu3DE" class="videos-card__play play" data-fancybox="video-gallery"></a>
+                </div>
+
+                <div class="videos-card">
+                    <a href="https://www.youtube.com/watch?v=pXRviuL6vMY" class="videos-card__play play" data-fancybox="video-gallery"></a>
+                </div>
+
+                <div class="videos-card">
+                    <a href="https://www.youtube.com/watch?v=Zi_XLOBDo_Y" class="videos-card__play play" data-fancybox="video-gallery"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="complex">
+    <div class="line"></div>
+    <div class="blur"></div>
+    <div class="container">
+        <div class="complex-inner">
+            <div class="complex-logo">
+                <img class="complex-logo__icon" src="images/icons/logo.svg" alt="logo">
+            </div>
+            <h2 class="complex-title">это комплексный детейлинг под ключ</h2>
+            <p class="complex-description">Мы предоставляем полный спектр услуг по уходу,<br>защите и визуальному обновлению автомобиля</p>
+            <div class="swipe">
+                <img src="images/volume/swipe.gif" alt="" class="swipe-gif">
+            </div>
+            <div class="complex-cards">
+                <div class="complex-card">
+                    <div class="complex-card__inner">
+                        <h3 class="complex-card__title">Полировка кузова</h3>
+                        <p class="complex-card__description">Устраняем мелкие&nbsp;царапины, восстанавливаем&nbsp;глубину цвета и блеск</p>
+                    </div>
+                </div>
+
+                <div class="complex-card">
+                    <div class="complex-card__inner">
+                        <h3 class="complex-card__title">Керамические защитные покрытия</h3>
+                        <p class="complex-card__description">Создаём эффект «жидкого стекла» — защищаем&nbsp;кузов&nbsp;от грязи, реагентов и&nbsp;выгорания, усиливаем блеск</p>
+                    </div>
+                </div>
+
+                <div class="complex-card">
+                    <div class="complex-card__inner">
+                        <h3 class="complex-card__title">Химчистка салона</h3>
+                        <p class="complex-card__description">Глубокая очистка всех поверхностей — ткани,&nbsp;кожа, ковролин, потолок</p>
+                    </div>
+                </div>
+
+                <div class="complex-card">
+                    <div class="complex-card__inner">
+                        <h3 class="complex-card__title">Восстановление и ремонт кузова</h3>
+                        <p class="complex-card__description">Устраняем вмятины, сколы, царапины и коррозию</p>
+                    </div>
+                </div>
+
+                <div class="complex-card">
+                    <div class="complex-card__inner">
+                        <h3 class="complex-card__title">Малярные работы</h3>
+                        <p class="complex-card__description">Покраска отдельных элементов или полный перекрас с подбором цвета и заводской текстуры</p>
+                    </div>
+                </div>
+
+                <div class="complex-card">
+                    <div class="complex-card__inner">
+                        <h3 class="complex-card__title">Перешив салонных элементов</h3>
+                        <p class="complex-card__description">Руль, ручка КПП, дверные карты, сиденья — любые элементы можно обновить под кожу, алькантару или нестандартные материалы</p>
+                    </div>
+                </div>
+
+                <div class="complex-card">
+                    <div class="complex-card__inner">
+                        <h3 class="complex-card__title">Бронирование лобового стекла</h3>
+                        <p class="complex-card__description">Прозрачная антиударная плёнка, защищающая стекло от трещин, сколов и пескоструя</p>
+                    </div>
+                </div>
+
+                <div class="complex-card">
+                    <div class="complex-card__inner">
+                        <h3 class="complex-card__title">Реставрация пластика</h3>
+                        <p class="complex-card__description">Внешний и внутренний пластик — возвращаем первозданный вид, убираем потертости, выгорание и микроповреждения</p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</section>
+<section class="address">
+    <div class="address-img">
+        <img src="images/address/address.avif" alt="" class="address-img__image">
+    </div>
+    <div class="container">
+        <div class="address-inner">
+            <div class="line-vertical"></div>
+            <h2 class="address-title">Ждем вас в детейлинг-студии</h2>
+            <div class="address-logo">
+                <img src="images/icons/logo.svg" alt="" class="address-logo__icon">
+            </div>
+            <p class="address-description">Ежедневно с 10:00 до 20:00 <br> без выходных</p>
+            <ul class="address-list">
+                <li class="address-item menu-list__item">
+                    <a class="map-icon" href="#">
+                        <img src="images/icons/map-icon.svg" alt="" class="map-icons__image">
+                    </a>
+                    <a href="#" class="map-text">Выборгское ш., 212,<br>корп. 12А</a>
+                    <span class="address-item__company">
+                        <span class="company-icon">
+                            <img src="images/icons/parnas.svg" alt="" class="company-icon__image">
+                        </span>
+                        <p class="company-text">Парнас</p>
+                    </span class="">
+                </li>
+                <li class="address-item menu-list__item">
+                    <a href="#" class="whatsapp">
+                        <img src="images/icons/whatsapp.svg" alt="" class="whatsapp-icon">
+                    </a>
+                    <div class="address-item__contacts contacts">
+                        <a href="tel:+79009996863" class="address-item__number contacts-number">+7 900 999 68 63</a>
+                        <a href="#" class="address-item__callback contacts-callback callback">Перезвоним за 1 минуту</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="map">
+    <div class="container">
+        <div class="map__inner">
+            <h2 class="map__title">Получите схему проезда и все контакты себе на телефон</h2>
+        </div>
+    </div>
+    <div class="map__item">
+            <div class="container">
+                <div class="map__item-inner">
+                    <div class="map__info">
+                        <div class="map__info-inner">
+                            <h3 class="map__info-title">Заполните форму ниже,</h3>
+                            <p class="map__info-description">чтобы получить подробную схему проезда в WhatsApp</p>
+                            <form action="#" class="map__info-form">
+                                <input type="tel" class="map-info__form-number quiz-finish__text-number" placeholder="Введите номер телефона" required>
+                                <button class="map__info-button quiz-finish__text-button" type="submit">Получить схему проезда <br>и все контакты себе в WhatsApp</button>
+                                <label class="map__info-agreements quiz-finish__text-agreements">
+                                    <input type="checkbox" class="map__info-agreement quiz-finish__text-agreement" required>
+                                    <span class="map__info-check quiz-finish__text-check"></span>
+                                    <p class="map__info-processing quiz-finish__text-processing">Я принимаю условия <a href="#">политики конфиденциальности</a></p>
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="yandex-map"></div>
+        </div>
+    </div>
+</section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="images/icons/logo.svg" alt="" class="footer-logo__icon">
+                <span class="logo-text">Детейлинг студия</span>
+            </div>
+            <ul class="footer-menu menu-list">
+                <li class="footer-menu__item menu-list__item">
+                    <a class="map-icon" href="#">
+                        <img src="images/icons/map-icon.svg" alt="" class="map-icons__image">
+                    </a>
+                    <a href="#" class="footer-menu__item-map map-text">Выборгское ш., 212,<br>корп. 12А</a>
+                </li>
+                <li class="footer-menu__item menu-list__item">
+                    <span class="company-icon">
+                    <img src="images/icons/parnas.svg" alt="" class="company-icon__image">
+                    </span>
+                    <p class="footer-menu__item-text company-text">Парнас</p>
+                </li>
+                <li class="footer-menu__item menu-list__item">
+                    <a href="#" class="whatsapp">
+                    <img src="images/icons/whatsapp.svg" alt="" class="whatsapp-icon">
+                    </a>
+                    <div class="footer-menu__item-contacts contacts">
+                    <a href="tel:+79009996863" class="footer-menu__item-number contacts-number">+7 900 999 68 63</a>
+                    <a href="#" class="contacts-callback callback">Перезвоним за 1 минуту</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="container">
+        <a href="#" class="footer-politics">Политика конфиденциальности</a>
+    </div>
+</footer>
+
+
+
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=default-sg-enplmreflrc8s0sj9lc1&lang=ru_RU" type="text/javascript"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>
