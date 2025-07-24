@@ -5550,7 +5550,8 @@ a {
 }
 @media (max-width: 767.98px) {
   .stages-cards {
-    overflow-x: hidden;
+      scrollbar-width: none;
+      overflow-x: auto;
   }
 }
 .stages-min {
