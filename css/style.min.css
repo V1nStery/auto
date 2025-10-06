@@ -5624,6 +5624,11 @@ a {
   left: 0;
   top: 10px;
 }
+@media (max-width: 468px) {
+  .stages-big__item::before {
+    top: 7px;
+  }
+}
 
 .icon-blue {
   width: 56px;
