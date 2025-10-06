@@ -6414,7 +6414,7 @@ a {
 }
 @media (max-width: 991.8px) {
   .reviews-title__text-span {
-    max-width: 255px;
+    max-width: 200px;
     height: 30px;
   }
 }
