@@ -6639,6 +6639,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .videos-card__link {
   position: absolute;
